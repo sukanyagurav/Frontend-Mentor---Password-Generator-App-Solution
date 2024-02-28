@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="./styles.css">
+ 
+  <title>Frontend Mentor | Password Generator App</title>
+</head>
+
+<body>
+  <main>
+    <h1>Password Generator</h1>
+    <div class="container">
+      <div class="password__container">
+        <p class="password">P23$2@sd1231</p>
+        <button class="copyBtn" disabled="false">
+          <span class="copyMessage"></span>
+          <img src="assets/images/icon-copy.svg" alt="copy password">
+        </button>
+      </div>
+      <div class="password__generator">
+        <div class="char__length">
+          <p>Character Length</p>
+          <span class="char__count">
+            0
+          </span>
+          <div class="char__range">
+             <div class="slider">
+              <input type="range" id="sliderValue" min="0" max="20" value="0" step="1">
+             </div>
+          </div>
+        </div>
+        <div class="checkboxes">
+          <div class="checkbox-container">
+            <input type="checkbox" id="uppercase"/>
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="lowercase"/>
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="numbers"/>
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="symbols"/>
+            <label for="symbols">Include Symbols</label>
+          </div>
+         
+        </div>
+        <div class="strength">
+          <span>strength</span>
+          <div class="strength__result">
+            <span class="strength__message"></span>
+            <div class="strength__bar">
+              <div class="bar" id="too_weak"></div>
+              <div class="bar" id="weak"></div>
+              <div class="bar" id="medium"></div>
+              <div class="bar" id="strong"></div>
+            </div>
+          </div>
+        </div>
+        <div class="generate-container">
+          <p class="error-message"></p>
+          <button class="btn">
+            
+            Generator <img role="presentation" src="assets/images/icon-arrow-right.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">SG</a>.
+  </footer>
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
